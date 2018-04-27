@@ -200,10 +200,10 @@ $(document).ready(function () {
         // show/hide floating header
         if (lastScrollY >= trigger + triggerOffset) {
             header.classList.add('floating-active');
-            top_image.classList.add('floating-active');
+            top_image.classList.add('hidden');
         } else {
             header.classList.remove('floating-active');
-            top_image.classList.remove('floating-active');
+            top_image.classList.remove('hidden');
         }
 
         progressBar.setAttribute('max', progressMax);
