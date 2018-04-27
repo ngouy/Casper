@@ -164,6 +164,7 @@ $(document).ready(function () {
 
     var progressBar = document.querySelector('progress');
     var header = document.querySelector('.floating-header');
+    var top_image = document.querySelector('.post-full-image.fixed');
     var title = document.querySelector('.post-full-title');
 
     var lastScrollY = window.scrollY;
@@ -197,8 +198,10 @@ $(document).ready(function () {
         // show/hide floating header
         if (lastScrollY >= trigger + triggerOffset) {
             header.classList.add('floating-active');
+            top_image.classList.add('floating-active');
         } else {
             header.classList.remove('floating-active');
+            top_image.classList.remove('floating-active');
         }
 
         progressBar.setAttribute('max', progressMax);
