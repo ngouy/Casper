@@ -689,6 +689,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
     background: var(--lightgrey) center center;
     background-size: cover;
     border-radius: 5px;
+    opacity: 1;
 }
 
 .post-full-image.fixed {
@@ -699,12 +700,10 @@ The first (most recent) post in the list is styled to be bigger than the others 
     margin: 0;
     left: 0;
     opacity: 1;
-    transition: opacity 1s;
 }
 
-.post-full-image.fixed.hidden {
-    opacity: 1;
-    transition: opacity 1s;
+.post-full-image.op-hidden {
+    opacity: 0;
 }
 
 @media (max-width: 1170px) {

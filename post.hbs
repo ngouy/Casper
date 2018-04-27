@@ -166,7 +166,8 @@ $(document).ready(function () {
 
     var progressBar = document.querySelector('progress');
     var header = document.querySelector('.floating-header');
-    var top_image = document.querySelector('.post-full-image.fixed');
+    var top_image_f = document.querySelector('.post-full-image.fixed');
+    var top_image = document.querySelector('.post-full-image');
     var title = document.querySelector('.post-full-title');
 
     var lastScrollY = window.scrollY;
@@ -200,10 +201,12 @@ $(document).ready(function () {
         // show/hide floating header
         if (lastScrollY >= trigger + triggerOffset) {
             header.classList.add('floating-active');
-            top_image.classList.add('hidden');
+            top_image_f.classList.add('op-hidden');
+            top_image.classList.remove('op-hidden');
         } else {
             header.classList.remove('floating-active');
-            top_image.classList.remove('hidden');
+            top_image_f.classList.remove('op-hidden');
+            top_image.classList.add('op-hidden');
         }
 
         progressBar.setAttribute('max', progressMax);
