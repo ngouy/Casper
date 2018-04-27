@@ -684,6 +684,8 @@ The first (most recent) post in the list is styled to be bigger than the others 
 }
 
 .post-full-image {
+    position: relative;
+    top: 265px;
     margin: 0 -10vw -165px;
     height: 800px;
     background: var(--lightgrey) center center;
@@ -694,9 +696,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
 
 .post-full-image.fixed {
     position: fixed;
-    position: fixed;
     width: 100%;
-    top: 265px;
     margin: 0;
     left: 0;
     opacity: 1;
@@ -709,6 +709,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
 @media (max-width: 1170px) {
     .post-full-image {
         margin: 0 -4vw -100px;
+        top: 200px;
         height: 600px;
         border-radius: 0;
     }
