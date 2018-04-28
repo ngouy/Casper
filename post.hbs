@@ -30,8 +30,6 @@ into the {body} of the default.hbs template --}}
             {{#if feature_image}}
             <figure class="post-full-image" style="background-image: url({{feature_image}})">
             </figure>
-            <figure class="post-full-image fixed" style="background-image: url({{feature_image}})">
-            </figure>
             {{/if}}
 
             <section class="post-full-content">
@@ -166,7 +164,6 @@ $(document).ready(function () {
 
     var progressBar = document.querySelector('progress');
     var header = document.querySelector('.floating-header');
-    var top_image_f = document.querySelector('.post-full-image.fixed');
     var top_image = document.querySelector('.post-full-image');
     var title = document.querySelector('.post-full-title');
 
@@ -201,12 +198,10 @@ $(document).ready(function () {
         // show/hide floating header
         if (lastScrollY >= trigger + triggerOffset) {
             header.classList.add('floating-active');
-            top_image_f.classList.add('op-hidden');
-            top_image.classList.remove('op-hidden');
+            top_image_f.classList.remove('fixed');
         } else {
             header.classList.remove('floating-active');
-            top_image_f.classList.remove('op-hidden');
-            top_image.classList.add('op-hidden');
+            top_image.classList.add('fixed');
         }
 
         progressBar.setAttribute('max', progressMax);
